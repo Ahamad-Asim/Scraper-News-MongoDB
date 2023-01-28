@@ -17,7 +17,7 @@ class HiPipeline(object):
             27017
         )
             db = self.conn['news']
-            self.collection = db['political']
+            self.collection = db['politics']
         
         def process_item(self, item, spider):
             self.collection.insert_one(dict(item))
